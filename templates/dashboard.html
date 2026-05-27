@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .summary {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            font-size: 14px;
+            color: #888;
+        }
+        .card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .chart {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .chart img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Personal Finance Dashboard</h1>
+
+    <!-- Summary Cards -->
+    <div class="summary">
+        <div class="card">
+            <h2>Total Income</h2>
+            <p>₹{{ income }}</p>
+        </div>
+        <div class="card">
+            <h2>Total Expenses</h2>
+            <p>₹{{ expenses }}</p>
+        </div>
+        <div class="card">
+            <h2>Savings</h2>
+            <p>₹{{ savings }}</p>
+        </div>
+        <div class="card">
+            <h2>Savings Rate</h2>
+            <p>{{ rate }}%</p>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="chart">
+        <h2>Spending by Category</h2>
+        <img src="charts/category_spending.png" alt="Category Chart">
+    </div>
+
+    <div class="chart">
+        <h2>Expense Distribution</h2>
+        <img src="charts/expense_distribution.png" alt="Distribution Chart">
+    </div>
+
+    <div class="chart">
+        <h2>Monthly Spending Trend</h2>
+        <img src="charts/monthly_trend.png" alt="Monthly Chart">
+    </div>
+
+</body>
+</html>
